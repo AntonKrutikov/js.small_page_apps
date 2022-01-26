@@ -1,0 +1,195 @@
+body {
+    font-family: monospace;
+    font-size: 14px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    cursor:unset;
+}
+.window {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 2px 2px rgba(100, 100, 100, 0.5);
+    border: 1px solid #000;
+    /* min-width: 200px;
+    min-height: 100px; */
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    border-radius: 2px;
+    background: #fff;
+}
+.window-bar {
+    color: #fff;
+    background: #222;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 5px;
+    cursor: move;
+}
+.window-title {
+    flex: 1;
+    text-align: left;
+}
+.window-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.window-inner {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    flex: 1;
+    display: flex;
+}
+
+/* TXT */
+.editor {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    max-height: 300px;
+    max-width: 300px;
+    overflow: hidden;
+}
+.editor-toolbar {
+    height: 2rem;
+    box-shadow: 0px 2px 1px #aaa;
+    z-index: 1000;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 0.5rem;
+}
+.editor-save {
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
+}
+.editor-new {
+    padding-left: 0.5rem;
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
+}
+.editor-area {
+    box-sizing: border-box;
+    padding: 5px;
+    white-space: pre;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+.editor-area:focus {
+    outline: none;
+}
+
+/* MP3 */
+.audio-player {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.audio-player-controls {
+    height: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.audio-player-controls-play {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    user-select: none;
+
+}
+.audio-player-controls-next, .audio-player-controls-prev  {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    padding: 0 1rem;
+    user-select: none;
+
+}
+.audio-player-controls-volume-up, .audio-player-controls-volume-down {
+    cursor: pointer;
+    padding: 0 1rem;
+    font-size: 24px;
+    user-select: none;
+}
+.audio-player-playlist {
+    flex: 1;
+    flex-direction: column;
+    padding: 0.5rem;
+}
+.audio-player-playlist-entry {
+    width: 100%;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* PAINT */
+.paint {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+.paint-toolbar {
+    height: 2rem;
+    box-shadow: 0px 2px 1px #aaa;
+    z-index: 1000;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 0.5rem;
+}
+.paint-erase {
+    padding-left: 0.5rem;
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
+}
+.paint-canvas {
+    flex: 1;
+    max-width: 100%;
+    max-height: calc(100% - 2rem);
+}
+.paint-color-picker {
+    border: 0;
+    padding: 0;
+    background: #fff;
+    margin-left: 1rem;
+    height: 32px;
+    width: 32px;
+}
+
+
+/* MAIN PAGE */
+.app-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #eee;
+    box-shadow: 1px 1px 2px #aaa;
+    margin: 1rem;
+    cursor: pointer;
+}
